@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Expense Tracker - JS</title>
+
+    <!-- FontAwesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- normalize css -->
+    <!-- <link
+      rel="stylesheet"
+      href="./styles/normalize.css"
+    /> -->
+
+    <!-- custom css -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/styles.css"
+    />
+  </head>
+  <body>
+
+    <main class="container">
+      <h2 class="title">Expense Tracker</h2>
+      <div class="show-balance">
+        <label style="font-weight: bolder;">YOUR BALANCE</label>
+        <div class="bolder">₹<span id="total-amount">0</span></div>
+      </div>
+      <div class="price-container">
+        <div>
+          <label class="bold">INCOME</label>
+          <div class="amount inc">₹<span>0</span></div>
+        </div>
+        <hr>
+        <div>
+          <label class="bold">EXPENSE</label>
+          <div class="amount exp">₹<span>0</span></div>
+        </div>
+      </div>
+
+      <div>
+      <p class="para bold">History</p>
+      </div>
+      <div class="show-items" id="show-items">
+        <div class="show income">
+          <div id="value"></div>
+          <div>₹<span id="income-amount">0</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="para bold">Add New Transaction</p>
+      </div>
+
+      <form class="input-container"> 
+
+        <div class="input-field">
+          <label class="input-title">Transaction</label>
+          <input type="text" placeholder="Enter Transaction" id="input-value">
+        </div>
+        <div class="input-field">
+          <label class="input-title">Amount (negative - expense, positive - income)</label>
+          <input type="text" placeholder="Enter Amount..." id="input-amount">
+        </div>
+        <button class="btn" id="btn">Add Transaction</button>
+      </form>
+    </main>
+
+    <!-- custom js -->
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>
