@@ -45,40 +45,53 @@
     <main class="container">
       <h2 class="title">Expense Tracker</h2>
       <div class="show-balance">
-        <label style="font-weight: bolder;">YOUR BALANCE</label>
-        <div class="bolder">₹<span id="total-amount">0</span></div>
+        <label style="font-weight: bolder; color: #1D3557; font-size: 18px;">YOUR BALANCE</label>
+        <div class="bolder balance-amt">₹<span id="total-amount">0.00</span></div>
       </div>
       <div class="price-container">
         <div>
-          <label class="bold">INCOME</label>
-          <div class="amount inc">₹<span>0</span></div>
+          <label class="bold inc-clr">INCOME</label>
+          <div class="amount inc">₹<span id="inc-amt">0.00</span></div>
         </div>
         <hr>
         <div>
-          <label class="bold">EXPENSE</label>
-          <div class="amount exp">₹<span>0</span></div>
+          <label class="bold exp-clr">EXPENSE</label>
+          <div class="amount exp">₹<span id="dec-amt">0.00</span></div>
         </div>
       </div>
 
       <div>
       <p class="para bold">History</p>
       </div>
-      <div class="show-items" id="show-items">
-        <div class="show income">
-          <div id="value"></div>
-          <div>₹<span id="income-amount">0</span></div>
-        </div>
+      <div class="transaction">
+        <ul class="trans" id="trans">
+          <li class="inp-income">
+            Salary
+            <span id="income-amount">0.00</span>
+            <button class="trans-btn">X</button>
+          </li>
+          <li class="inp-expense">
+            Petrol
+            <span id="expense-amount">-0.00</span>
+            <button class="trans-btn">X</button>
+          </li>
+          <li class="inp-expense">
+            Food
+            <span id="expense-amount">-0.00</span>
+            <button class="trans-btn">X</button>
+          </li>
+        </ul>
       </div>
 
       <div>
         <p class="para bold">Add New Transaction</p>
       </div>
 
-      <form class="input-container"> 
+      <form class="input-container" id="input-container"> 
 
         <div class="input-field">
           <label class="input-title">Transaction</label>
-          <input type="text" placeholder="Enter Transaction" id="input-value">
+          <input type="text" placeholder="Enter Transaction" id="input-description">
         </div>
         <div class="input-field">
           <label class="input-title">Amount (negative - expense, positive - income)</label>

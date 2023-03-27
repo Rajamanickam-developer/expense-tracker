@@ -127,6 +127,11 @@ body{
   align-items: center;
   gap: 1.5rem;
   padding: 2rem;
+  /* background-color: #aaaaaa; */
+}
+
+.title{
+  text-transform: uppercase;
 }
 
 .bolder{
@@ -139,6 +144,7 @@ body{
 }
 .amount{
   font-size: 25px;
+  margin-top: 5px;
 }
 
 .show-balance{
@@ -155,6 +161,10 @@ body{
   padding: 0.3rem 1rem;
 }
 
+.balance-amt{
+  color: var(--clr-berkeley-blue);
+}
+
 .price-container{
   display: flex;
   gap: 1rem;
@@ -164,32 +174,67 @@ body{
   width: 80%;
 }
 
-.show{
-  width: 23rem;
-  padding: 0.5rem;
+
+.transaction{
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.trans li{
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  margin: 7px 0;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
-  box-shadow: var(--dark-shadow);
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
 }
 
-.income{
+
+.trans li.inp-income{
   border-right: 5px solid green;
 }
-.expense{
-  border-right: 5px solid red;
+
+.trans li.inp-expense{
+  border-right: 5px solid orangered;
 }
 
-.inc{
+
+.trans-btn{
+  position: absolute;
+  opacity: 0;
+  left: -15px;
+  padding: 3px;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+} 
+
+.trans li:hover .trans-btn{
+  opacity: 1;
+}
+
+.trans{
+  list-style-type: none;
+}
+
+ .inc{
+  color: green;
+}
+.inc-clr{
   color: green;
 }
 .exp{
-  color: red;
+  color: orangered;
 }
-
-.show-items{
-  display: none;
-  flex-direction: column;
-  gap: 0.6rem;
+.exp-clr{
+  color: orangered;
 }
 
 .input-container{
@@ -203,6 +248,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 5px;
+  font-weight: 500;
 }
 .input-title{
   font-size: 20px;
@@ -219,6 +265,7 @@ input[type='text']{
   border-radius: 5px;
   color: var(--clr-platinum);
   font-weight: 800;
+  cursor: pointer;
 }
 
 .btn:hover{
